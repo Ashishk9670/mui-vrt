@@ -1,5 +1,7 @@
 # mui-vrt
 
+[![CI](https://github.com/Ashishk9670/mui-vrt/actions/workflows/ci.yml/badge.svg)](https://github.com/Ashishk9670/mui-vrt/actions/workflows/ci.yml)
+
 Lightweight visual regression + contrast diff tool. Built with MUI components
 in mind, but the engine has no MUI dependency — point it at any site via a
 config file.
