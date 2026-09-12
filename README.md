@@ -123,3 +123,13 @@ point the run step at it:
 Commit `.mui-vrt/baseline/` to your repo so the diff is meaningful from the
 first CI run, and review baseline changes in PRs the same way you'd review
 any other generated-asset diff.
+
+**Baselines are OS/font-stack specific.** Chromium's text rendering differs
+between macOS and Linux (different default `sans-serif` substitution and
+anti-aliasing), which alone can move a few percent of pixels with zero real
+style change — contrast is unaffected (it's read from computed CSS, not
+pixels), but the pixel diff will false-positive. Generate baselines in the
+same environment you'll run `compare` in — for a GitHub Actions CI gate,
+that means capturing them on `ubuntu-latest` (e.g. run `capture`/`approve`
+in a workflow_dispatch job and commit the result), not on a contributor's
+laptop.
