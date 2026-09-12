@@ -1,0 +1,9 @@
+node_modules/
+dist/
+# Baselines under .mui-vrt/baseline/ are meant to be committed so regressions
+# are reviewable as a diff in PRs — only ignore the ephemeral run output.
+.mui-vrt/current/
+.mui-vrt/diff/
+.mui-vrt/report.json
+mui-vrt-report.html
+*.log
